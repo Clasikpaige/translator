@@ -1,0 +1,24 @@
+# The model type to use for training and translation.
+model: NMT
+
+# The data configuration.
+data:
+  # Source and target sequences.
+  src: data/demo.train.src
+  tgt: data/demo.train.tgt
+
+# The model configuration.
+model_dir: model/demo-model
+
+# The training configuration.
+train_steps: 10000
+
+# The vocabulary configuration.
+vocab:
+  # Vocabulary size.
+  src: data/demo.vocab.src
+  tgt: data/demo.vocab.tgt
+
+# The feature configuration.
+world_size: 1
+gpu_ranks: [0]
